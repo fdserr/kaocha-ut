@@ -13,9 +13,15 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "deps.edn" }}
             - v1-dependencies-
-      - run: chmod +x bin/kaocha &&\
-             PATH=$PWD/bin:$PATH
-      - run: kaocha unit
+      - run:
+          name: Env setup
+          command: |
+            echo 'export PATH=$PWD/bin:$PATH' >> $BASH_ENV
+            chmod +x bin/kaocha
+            source /home/circleci/.bashrc
+      - run:
+          name: Kaocha unit tests
+          command: kaocha unit
       - save_cache:
           paths:
             - ~/.m2
