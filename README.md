@@ -13,7 +13,7 @@ Sample project tested under [Kaocha](https://github.com/lambdaisland/kaocha).
 ### Clojure
 - [x] REPL
 - [x] Command line
-- [ ] Circle CI
+- [x] Circle CI
 
 ### ClojureScript
 - [ ] Browser REPL
@@ -47,3 +47,7 @@ $ bin/kaocha unit
 [(.)]
 1 tests, 1 assertions, 0 failures.
 ```
+
+### Circle CI
+
+[![CircleCI](https://circleci.com/gh/fdserr/kaocha-ut.svg?style=svg)](https://circleci.com/gh/fdserr/kaocha-ut)
