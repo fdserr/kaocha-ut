@@ -1,41 +1,31 @@
 {:deps
  {org.clojure/clojure {:mvn/version "1.10.0"}
   org.clojure/clojurescript {:mvn/version "1.10.439"}}
+
  :paths
  ["src"]
 
  :aliases
 
- {:dev
-  {:extra-paths
-   ["test"]
-   :extra-deps
+ {:kaocha
+  {:extra-deps
    {lambdaisland/kaocha {:local/root "../kaocha"}
     lambdaisland/kaocha-cljs {:local/root "../kaocha-cljs"}}}
+
+  :dev
+  {:extra-paths
+   ["test"]}
 
   :browser-repl
   {:main-opts
    ["-m" "cljs.main" "--compile" "ut.core" "--repl"]
    :extra-paths
-   ["test"]
-   :extra-deps
-   {lambdaisland/kaocha {:local/root "../kaocha"}
-    lambdaisland/kaocha-cljs {:local/root "../kaocha-cljs"}}}
+   ["test"]}
 
   :test-clj
   {:main-opts
-   ["-m" "kaocha.runner" "unit"]
-   :extra-paths
-   ["test"]
-   :extra-deps
-   {lambdaisland/kaocha {:local/root "../kaocha"}
-    lambdaisland/kaocha-cljs {:local/root "../kaocha-cljs"}}}
+   ["-m" "kaocha.runner" "unit"]}
 
   :test-cljs
   {:main-opts
-   ["-m" "kaocha.runner" "unit-cljs"]
-   :extra-paths
-   ["test"]
-   :extra-deps
-   {lambdaisland/kaocha {:local/root "../kaocha"}
-    lambdaisland/kaocha-cljs {:local/root "../kaocha-cljs"}}}}}
+   ["-m" "kaocha.runner" "unit-cljs"]}}}
