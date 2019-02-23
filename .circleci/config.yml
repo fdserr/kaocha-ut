@@ -13,10 +13,10 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "deps.edn" }}
             - v1-dependencies-
-      - run: clojure -Rkaocha -Stree
+      - run: chmod +x bin/kaocha $$\
+             PATH=$PWD/bin:$PATH
+      - run: kaocha unit
       - save_cache:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "deps.edn" }}
-      - run: chmod +x bin/kaocha
-      - run: bin/kaocha unit
