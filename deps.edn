@@ -7,10 +7,15 @@
 
  :aliases
 
- {:kaocha
+ {:kaocha-local
   {:extra-deps
    {lambdaisland/kaocha {:local/root "../kaocha"}
     lambdaisland/kaocha-cljs {:local/root "../kaocha-cljs"}}}
+
+  :kaocha
+   {:extra-deps
+    {lambdaisland/kaocha {:mvn/version "0.0-389"}
+     lambdaisland/kaocha-cljs {:mvn/version "0.0-16"}}}
 
   :dev
   {:extra-paths
