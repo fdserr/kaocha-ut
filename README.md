@@ -5,7 +5,6 @@ Sample project tested under [Kaocha](https://github.com/lambdaisland/kaocha).
 ## Assuming
 
 - Clojure [Deps/CLI](https://clojure.org/guides/getting_started) installed
-- clones of `kaocha` and `kaocha-cljs` repos present in `../` (or change `deps.edn`)
 
 
 ## Objectives
