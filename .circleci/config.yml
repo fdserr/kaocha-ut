@@ -13,7 +13,7 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "deps.edn" }}
             - v1-dependencies-
-      - run: chmod +x bin/kaocha $$\
+      - run: chmod +x bin/kaocha &&\
              PATH=$PWD/bin:$PATH
       - run: kaocha unit
       - save_cache:
