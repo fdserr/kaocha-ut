@@ -1,0 +1,3 @@
+#!/bin/bash
+
+clojure -Akaocha -m kaocha.runner "$@"

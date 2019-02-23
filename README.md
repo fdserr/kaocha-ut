@@ -12,7 +12,7 @@ Sample project tested under [Kaocha](https://github.com/lambdaisland/kaocha).
 
 ### Clojure
 - [x] REPL
-- [ ] Command line
+- [x] Command line
 - [ ] Circle CI
 
 ### ClojureScript
@@ -29,7 +29,6 @@ Sample project tested under [Kaocha](https://github.com/lambdaisland/kaocha).
 ## Status
 
 ### Clojure REPL
-
 ```
 $ clj -Akaocha:dev
 Clojure 1.10.0
@@ -39,4 +38,12 @@ user=> (k/run :unit)
 [(.)]
 1 tests, 1 assertions, 0 failures.
 #:kaocha.result{:count 1, :pass 1, :error 0, :fail 0, :pending 0}
+```
+
+### Clojure command line
+```
+$ chmod +x bin/kaocha
+$ bin/kaocha unit
+[(.)]
+1 tests, 1 assertions, 0 failures.
 ```
