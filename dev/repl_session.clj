@@ -14,7 +14,6 @@ clj -Akaocha:dev
          'ut.any-name
          :reload)
 
-
 (t/run-all-tests)
 
 ;;;
@@ -27,10 +26,10 @@ clj -Akaocha:dev
 ;;; Kaocha diagnose
 (k/config)
 (pp)
+
 (k/test-plan)
 (pp)
 
 
 ;;; NS patterns
-(re-matches #"-test$" "ut.core-test")
-(re-matches #"\S+" "ut.core")
+(re-matches #".*" "ut.core")
