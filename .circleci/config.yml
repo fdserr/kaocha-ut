@@ -17,10 +17,10 @@ jobs:
           name: Env setup
           command: |
             echo 'export PATH=$PWD/bin:$PATH' >> $BASH_ENV
-            chmod +x bin/kaocha
             source /home/circleci/.bashrc
+            chmod +x bin/kaocha
       - run:
-          name: Kaocha unit tests
+          name: Clojure unit tests
           command: kaocha unit
       - save_cache:
           paths:

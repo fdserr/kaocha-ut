@@ -41,8 +41,7 @@ user=> (k/run :unit)
 
 ### Clojure command line
 ```
-$ chmod +x bin/kaocha
-$ PATH=$PWD/bin:$PATH
+$ chmod +x bin/kaocha && PATH=$PWD/bin:$PATH
 $ kaocha unit
 [(.)]
 1 tests, 1 assertions, 0 failures.

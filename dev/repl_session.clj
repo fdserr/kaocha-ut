@@ -1,15 +1,21 @@
 ;;; NOT A NS
 ;;; Clojure/Script REPL Session
 
-(require '[ut.core :as ut] :reload)
-(require 'ut.core-test :reload)
+clj -Akaocha:dev
 
 ;;; clj tests
 (require '[clojure.test :as t])
+
 ;;; cljs tests
 (require '[cljs.test :as t])
 
-(t/run-tests 'ut.core-test)
+(require '[ut.core :as ut]
+         'ut.core-test
+         'ut.any-name
+         :reload)
+
+
+(t/run-all-tests)
 
 ;;;
 
@@ -23,3 +29,8 @@
 (pp)
 (k/test-plan)
 (pp)
+
+
+;;; NS patterns
+(re-matches #"-test$" "ut.core-test")
+(re-matches #"\S+" "ut.core")
